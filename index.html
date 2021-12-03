@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/alt_index.css">
+    <link rel="stylesheet" href="styles/index.css" id="theme-link">
+    <title>Welcome</title>
+</head>
+<body>
+    <div class="style__css">
+      <span class="change__css" aria-label="Изменить стиль" data-microtip-position="bottom" role="tooltip">
+        <img src="../img/change.png" alt="" srcset="" id="change_css__button" onclick="ChangeTheme()">
+      </span>
+      <div id="full__version" aria-label="Полная версия" data-microtip-position="bottom" role="tooltip">
+        <img src="../img/version.png" alt="" srcset="" onclick="fullVersion()">
+      </div>
+    </div>
+    <div class="main__window">
+        <div class="tabs">
+            <div class="tabs__nav">
+              <a class="tabs__link tabs__link_active" href="#content-1">Авторизация</a>
+              <a class="tabs__link" href="#content-2">Регистрация</a>
+            </div>
+            <div class="tabs__content">
+              <div class="tabs__pane tabs__pane_show" id="content-1">
+                <span>Название учетной записи</span>
+                <input type="text" name="" id="loginEnter">
+                <span>Пароль</span>
+                <div>
+                  <input type="password" name="" id="passwordEnter">
+                </div>
+                <button onclick="sendDataLog()">Войти</button>
+              </div>
+              <div class="tabs__pane" id="content-2">
+                <span>Адрес электронной почты</span>
+                <input type="text" name="" id="email">
+                <span>Пароль</span>
+                <input type="password" name="" id="passwordCreate">
+                <span>Повторите пароль</span>
+                <input type="password" name="" id="passwordRepeat">
+                <button onclick="sendDataReg()">Зарегестрироваться</button>
+              </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.responsivevoice.org/responsivevoice.js?key=EPxWfDN2"></script>
+    <script src='auth.js'></script>
+</body>
+</html>

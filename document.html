@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/offline.css">
+    <link rel="stylesheet" href="../styles/huebee.css">
+    <link rel="stylesheet" href="https://unpkg.com/huebee@2/dist/huebee.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <div class="instrum_panel">
+          <div class="fonts">
+              <select id="fonts" onchange="changeFont()">
+                  <option value="Times New Roman">Times New Roman</option>
+                  <option value="Arial">Arial</option>
+                  <option value="Calibri">Calibri</option>
+                  <option value="Comic Sans MS">Comic Sans MS</option>
+              </select>
+            <select id="fontSize" onchange="changeFontSize()">
+                <option>12</option>
+                <option>14</option>
+                <option>16</option>
+                <option>18</option>
+                <option>20</option>
+                <option>22</option>
+                <option selected>24</option>
+            </select>
+            <span class="change__css" aria-label="Полужирным" data-microtip-position="bottom" role="tooltip">
+              <img src="../img/bold.png" alt="Полужирным" srcset="" id="BoldCommand"  tabindex="1">
+            </span>
+            <span class="change__css" aria-label="Курсив" data-microtip-position="bottom" role="tooltip">
+              <img src="../img/italic.png" alt="Курсив" srcset=""id="CurveCommand" tabindex="2">
+            </span>
+            <span class="change__css" aria-label="Подчеркнуть" data-microtip-position="bottom" role="tooltip">
+              <img src="../img/underline.png" alt="Подчеркнуть" srcset="" id="UnderlineCommand" tabindex="3">
+            </span>
+            <span class="change__css" aria-label="К левому краю" data-microtip-position="bottom" role="tooltip">
+              <img src="../img/align left.png" alt="К левому краю" srcset="" id="ToLeftCommand" tabindex="4">
+            </span>
+            <span class="change__css" aria-label="По центру" data-microtip-position="bottom" role="tooltip">
+              <img src="../img/align center.png" alt="По центру" srcset="" id="ToCenterCommand" tabindex="5">
+            </span>
+            <span class="change__css" aria-label="К правому краю" data-microtip-position="bottom" role="tooltip">
+              <img src="../img/align right.png" alt="К правому краю" srcset="" id="ToRightCommand" tabindex="6">
+            </span>
+            <span class="change__css" aria-label="По ширине" data-microtip-position="bottom" role="tooltip">
+              <img src="../img/alignFull.png" alt="По ширине" srcset="" id="ToEverCommand" tabindex="7">
+            </span>
+            <span class="change__css" aria-label="Ненумерованный список" data-microtip-position="bottom" role="tooltip">
+              <img src="../img/bullet list.png" alt="Ненумерованный список" srcset="" id="ULCommand" tabindex="8">
+            </span>
+            <span class="change__css" aria-label="Нумерованный список" data-microtip-position="bottom" role="tooltip">
+              <img src="../img/numbered list.png" alt="Нумерованный список" srcset="" id="OLCommand" tabindex="9">
+            </span>
+            <div data-huebee='{ "className": "dark-picker" }'><img src="../img/backColor.svg" alt="Цвет фона" tabindex="10"></div>
+            <div><img src="../img/foreColor.svg" alt="Цвет текста" onclick="fontColorCustom()" tabindex="11"><input type="color" id="head" name="head"
+              value="#e66465" hidden>
+            </div>
+          </div>
+          <div class="files">
+            <span class="change__css" aria-label="Файл" data-microtip-position="bottom" role="tooltip">
+              <img src="../img/file.png" alt="Файл" srcset="" id="FileBack" tabindex="12">
+            </span>
+            <span class="change__css" aria-label="Сохранить" data-microtip-position="bottom" role="tooltip">
+              <img src="../img/save.png" alt="Сохранить" srcset="" onclick="saveCommand()" tabindex="13">
+            </span>
+            <span class="change__css" aria-label="Сохранить как" data-microtip-position="bottom" role="tooltip">
+              <img src="../img/saveHow.png" alt="Сохранить как" srcset="" onclick="saveCommandOne()" tabindex="14">
+            </span>
+            <span class="change__css" aria-label="Печать" data-microtip-position="bottom" role="tooltip">
+              <img src="../img/print.png" alt="Печать" srcset="" onclick="PrintElem('Text')" tabindex="15">
+            </span>
+            <span class="change__css" aria-label="Поля страниц" data-microtip-position="bottom" role="tooltip">
+              <img src="../img/border.png" alt="Поля страниц" srcset="" id="AreaCommand" tabindex="16">
+            </span>
+          </div>
+          <div class="enterText" id="enterId">
+            <span class="change__css" aria-label="Начать запись" data-microtip-position="bottom" role="tooltip">
+              <img src="../img/startRecord.png" alt="Начать запись" id="start" srcset="" onclick="buttonStartRecording(this)" tabindex="17"> 
+            </span>
+            <span class="change__css" aria-label="Ввести команду" data-microtip-position="bottom" role="tooltip">
+              <img src="../img/enterCommand.png" alt="Ввести команду" id="FormatCommand" srcset="" tabindex="19">
+            </span>
+            <span class="change__css" aria-label="Прочитать" data-microtip-position="bottom" role="tooltip">
+              <img src="../img/readLoud.png" alt="Прочитать" onclick="sayText()" srcset="" tabindex="" tabindex="20">
+            </span>
+          </div>
+        <div class="container">
+          <div id="slider" class="slider">
+            <div class="thumb" id="thumb1"></div>
+            <div id="tagline" class="fulljustify">
+              0
+              <div style="margin-left: 1.9rem; width: min-content;">1</div> 
+              <div style="margin-left: 1.9rem; width: min-content;">2</div> 
+              <div style="margin-left: 1.8rem; width: min-content;">3</div> 
+              <div style="margin-left: 1.9rem; width: min-content;">4</div> 
+              <div style="margin-left: 1.8rem; width: min-content;">5</div> 
+              <div style="margin-left: 1.9rem; width: min-content;">6</div> 
+              <div style="margin-left: 1.8rem; width: min-content;">7</div> 
+              <div style="margin-left: 1.9rem; width: min-content;">8</div> 
+              <div style="margin-left: 1.9rem; width: min-content;">9</div> 
+              <div style="margin-left: 1.6rem; width: min-content;">10</div> 
+              <div style="margin-left: 1.3rem; width: min-content;">11</div> 
+              <div style="margin-left: 1.3rem; width: min-content;">12</div> 
+              <div style="margin-left: 1.4rem; width: min-content;">13</div> 
+              <div style="margin-left: 1.3rem; width: min-content;">14</div> 
+              <div style="margin-left: 1.4rem; width: min-content;">15</div> 
+              <div style="margin-left: 1.3rem; width: min-content;">16</div> 
+              <div style="margin-left: 1.3rem; width: min-content;">17</div> 
+              <div style="margin-left: 1.4rem; width: min-content;">18</div> 
+              <div style="margin-left: 1.4rem; width: min-content;">19</div> 
+              <div style="margin-left: 1.4rem; width: min-content;">20</div> 
+              <div style="margin-left: 1.3rem; width: min-content;">21</div> 
+            </div>
+            <div class="thumb" id="thumb2"></div>
+          </div>
+        </div>
+      </div>
+        <div class="Text" contenteditable="true" style="height: 297mm; width: 210mm" id="mainText" onmouseup="prefirstLine()" onfocus="takechanges()"><div><br></div></div>
+      </main>
+      <div class="gen_ind">
+        <div class="round_color_ind" id="indicatorLight"></div>
+        <div class="text_ind" id="indicatorLine">Не в сети</div>
+      </div>
+      <script src="huebee.pkgd.js"></script>
+      <script src="https://code.responsivevoice.org/responsivevoice.js?key=EPxWfDN2"></script>
+      <script src='offline.js'></script>
+      <script src='document.js'></script>
+</body>
+</html>

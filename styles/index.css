@@ -1,0 +1,121 @@
+@import '../node_modules/microtip/microtip.css';
+*{
+    margin: 0;
+    padding: 0;
+}
+@media (min-width:500px) {
+    html{
+        font-size: 18px;
+    }
+}
+@media (min-width:256px) and (max-width:499px) {
+    html{
+        font-size: 14px;
+    }
+}
+@media (max-width:255px) {
+    html{
+        font-size: 10px;
+    }
+}
+body{
+    background-color: #B4B4B4;
+    color: black;
+}
+input{
+    outline: none;
+    padding-left: 0.5rem;
+    width: 20rem;
+}
+.style__css{
+    margin-top: 1rem;
+    margin-left: 2rem;
+    display: flex;
+}
+#change_css__button{
+    height: 3rem;
+}
+#full__version{
+    margin-left: 1rem;
+}
+#full__version > img{
+    height: 2rem;
+}
+.change__css{
+    display: block;
+}
+.main__window{
+    margin: 10%;
+}
+.tabs {
+    border: 1px solid rgb(61, 61, 61);
+    width: 30rem;
+    margin-left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.tabs__nav {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    background: #B4B4B4;
+    margin: 0;
+    border-bottom: 1px solid rgb(61, 61, 61);
+}
+
+.tabs__link {
+    padding: 0.5rem 0.75rem;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    flex-shrink: 0;
+    flex-grow: 1;
+}
+
+.tabs__link_active {
+    background: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    cursor: default;
+}
+
+.tabs__link:not(.tabs__link_active):hover,
+.tabs__link:not(.tabs__link_active):focus {
+    background-color: #7c7c7c;
+}
+.tabs__content {
+    padding: 1rem;
+}
+.tabs__pane {
+    display: none;
+}
+.tabs__pane_show {
+    display: flex;
+    flex-direction: column;
+}    
+.tabs__pane_show input{
+    margin-top: 2%;
+    margin-bottom: 2%;
+    border-radius: 20px;
+    font-size: 1rem;
+}  
+.tabs__pane_show button{
+    padding: 0.5rem;
+    border-radius: 20px;
+    width: min-content;
+    font-size: 1rem;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0); 
+    background-color: #B4B4B4;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    border: 0.001rem solid rgb(131, 131, 131);
+}   
+
+.loader{
+    width: min-content;
+}
+.loader img{
+    padding-left: 1rem;
+    width: 1rem;
+    height: 1rem;
+}

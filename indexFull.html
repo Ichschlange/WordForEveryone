@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/indexFull.css">
+    <title>Welcome</title>
+</head>
+<body>
+    <div class="main__window">  
+        <div>
+            <span id="full__version" onclick="genVersion()">Версия для слабовидящих</span>
+        </div>
+        <div class="tabs">
+            <div class="tab-2">
+            <label for="tab2-1">Авторизация</label>
+            <input id="tab2-1" name="tabs-two" type="radio" checked="checked">
+            <div>
+                <div class="tabs__pane tabs__pane_show" id="content-1">
+                    <span>Название учетной записи</span>
+                    <input type="text" name="" id="loginEnter">
+                    <span>Пароль</span>
+                    <div>
+                        <input type="password" name="" id="passwordEnter">
+                        <!--<span id="forgetPass" onclick="forgetPass()">Забыли пароль?</span>-->
+                    </div>
+                    <button onclick="sendDataLog()">Войти</button>
+                    <!--<button onclick="outLog()">Продолжить без входа</button>-->
+                </div>
+            </div>
+            </div>
+            <div class="tab-2">
+            <label for="tab2-2">Регистрация</label>
+            <input id="tab2-2" name="tabs-two" type="radio">
+            <div>
+                <div class="tabs__pane tabs__pane_show" id="content-1">
+                    <span>Адрес электронной почты</span>
+                    <input type="text" name="" id="email">
+                    <span>Пароль</span>
+                    <input type="password" name="" id="passwordCreate">
+                    <span>Повторите пароль</span>
+                    <input type="password" name="" id="passwordRepeat">
+                    <button onclick="sendDataReg()">Зарегестрироваться</button>
+                    <!--<button onclick="outLog()">Продолжить без входа</button>-->
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="waveWrapper waveAnimation">
+       
+        <div class="waveWrapperInner bgTop">
+            
+            <div class="wave waveTop" style="background-image: url('http://front-end-noobs.com/jecko/img/wave-top.png')"></div>
+        </div>
+        
+        <div class="waveWrapperInner bgMiddle">
+            
+            <div class="wave waveMiddle" style="background-image: url('http://front-end-noobs.com/jecko/img/wave-mid.png')"></div>
+        </div>
+        <div class="waveWrapperInner bgBottom">
+            <div class="wave waveBottom" style="background-image: url('http://front-end-noobs.com/jecko/img/wave-bot.png')"></div>
+        </div>
+        
+    </div>
+
+
+
+
+
+
+      
+
+    <script src="https://code.responsivevoice.org/responsivevoice.js?key=EPxWfDN2"></script>
+    <script src='authFull.js'></script>
+</body>
+</html>

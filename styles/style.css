@@ -1,0 +1,285 @@
+@import '../node_modules/microtip/microtip.css';
+*{
+    padding: 0;
+    margin: 0;
+}
+.day{
+    margin: 10px;
+    border-width: 1px;
+    border-color: black;
+}
+#tickarks{
+    display: block;
+}
+input[type='range'] {
+    box-sizing: border-box;
+    border: 0px solid transparent;
+    padding: 0px;
+    margin: 0px;
+    width: 210mm;
+    height: 50px;
+    cursor: pointer;
+    background: repeating-linear-gradient(90deg, #777, #777 1px, transparent 1px, transparent 10mm) no-repeat 50% 50%;
+    font-size: 16px;
+}/*
+input[type='range'],
+input[type='range']::-webkit-slider-runnable-track,
+input[type='range']::-webkit-slider-thumb {
+   
+}*/
+input[type='range']::-webkit-slider-runnable-track {
+    box-sizing: border-box;
+    width: 200mm;
+    height: 5px;
+    border-radius: 2px;
+    background: #777;
+}
+input[type='range']::-moz-range-track {
+    box-sizing: border-box;
+    width: 200px;
+    height: 5px;
+    border-radius: 2px;
+    padding: 0px;
+    background: #777;
+}
+input[type='range']::-moz-range-thumb {
+    box-sizing: border-box;
+    padding: 0px;
+    height: 20px;
+    width: 10px;
+    border-radius: 2px;
+    border: 1px solid;
+    background: #EEE;
+}
+input[type='range']::-ms-track {
+    box-sizing: border-box;
+    width: 210mm;
+    height: 5px;
+    border-radius: 2px;
+    padding: 0px;
+    background: #777;
+    color: #777;
+}
+input[type='range']::-webkit-slider-thumb {
+    box-sizing: border-box;
+    padding: 0px;
+    height: 20px;
+    width: 10px;
+    border-radius: 2px;
+    border: 1px solid;
+    margin-top: -8px;
+    background: #EEE;
+}
+input[type='range']::-ms-thumb {
+    box-sizing: border-box;
+    padding: 0px;
+    height: 20px;
+    width: 10px;
+    border-radius: 2px;
+    border: 1px solid;
+    background: #EEE;
+}
+input[type="range"]::-ms-fill-lower {
+    background: transparent;
+}
+input[type='range']:focus {
+    outline: none;
+}
+.container:after {
+    color: #777;
+    padding-top: 40px;
+    padding-left: 1.6rem;
+    word-spacing: 20px;
+    left: 0px;
+    top: 0px;
+    z-index: -1;
+}
+.container {
+    padding: 0px;
+}
+
+/* Just for demo */
+
+output{
+    display: block;
+    margin-top: 20px;
+    color: #777;
+}
+output:before{
+    content:"Selected Value: ";
+    font-weight: bold;
+}
+body {
+    font-family: Calibri, Arial;
+    background-color: #E5E5E5;
+ 
+}
+.container{
+    margin-left: 49%;
+    transform: translate(-50%, 0);
+    width: min-content;
+}
+.Text{
+    margin-top: 2rem;
+    padding-bottom: 1rem;
+    margin-left: 50%;
+    transform: translate(-50%, 0);
+    box-sizing: border-box;
+    background-color: white;
+    border: solid; 
+    border-width: 1px;
+    box-shadow: 6px 10px 9px 0px rgba(0,0,0,0.75);
+    overflow:hidden;
+}
+ol, ul{
+    list-style-position: inside; /*important lvl10*/
+}
+.Text span {
+    display: inline;
+}
+.control{
+    width: min-content;
+}
+.instrum_panel{
+    position: sticky;
+    top: 0;
+    padding-top: 1rem;
+    padding-left: 2rem;
+    background-color: #B4B4B4;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+}
+.instrum_panel img{
+    height: 2rem;
+}
+.fonts{
+    width: 50rem;
+    margin: 0;
+    display: flex;
+}
+.fonts span{
+    margin-left: 1rem;
+}
+.fonts div{
+    margin-left: 1rem;
+   
+}
+.files{
+    margin-top: 1rem;
+}
+.files span{
+    margin-left: 1rem;
+}
+.enterText{
+    margin-top: 1rem;
+}
+.enterText span{
+    margin-left: 1rem;
+}
+.slider{
+    border-radius: 5px;
+    background: #E0E0E0;
+    background: linear-gradient(left top, #E0E0E0, #EEEEEE);
+    width: 803.8px;
+    height: 3rem;
+    margin: 5px;
+}
+.fulljustify:after {
+    content: "";
+    display: inline-block;
+    width: 210mm;	
+}
+#tagline {
+    height: 1rem;
+    overflow: hidden;
+    display: flex;
+}
+.thumb{
+    width: 10px;
+    height: 15px;
+    border-radius: 3px;
+    position: relative;
+    left: 0px;
+    top: -5px;
+    background: blue;
+    cursor: pointer;
+}
+#thumb2{
+    top: 5px;
+}
+/* line 3, ../sass/_offline-theme-base-indicator.sass */
+.offline-ui, .offline-ui *, .offline-ui:before, .offline-ui:after, .offline-ui *:before, .offline-ui *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  
+  /* line 6, ../sass/_offline-theme-base-indicator.sass */
+  .offline-ui {
+    display: none;
+    position: fixed;
+    background: white;
+    z-index: 2000;
+    display: inline-block;
+  }
+  /* line 13, ../sass/_offline-theme-base-indicator.sass */
+  .offline-ui .offline-ui-retry {
+    display: none;
+  }
+  /* line 16, ../sass/_offline-theme-base-indicator.sass */
+  .offline-ui.offline-ui-up {
+    display: block;
+  }
+  /* line 19, ../sass/_offline-theme-base-indicator.sass */
+  .offline-ui.offline-ui-down {
+    display: block;
+  }
+  
+  /* line 8, ../sass/offline-theme-dark-indicator.sass */
+  .offline-ui {
+    -webkit-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15);
+    -webkit-border-radius: 4px 4px 0 0;
+    -moz-border-radius: 4px 4px 0 0;
+    -ms-border-radius: 4px 4px 0 0;
+    -o-border-radius: 4px 4px 0 0;
+    border-radius: 4px 4px 0 0;
+    font-family: "Helvetica Neue", sans-serif;
+    font-weight: 300;
+    padding: 1em;
+    background: black;
+    color: #cccccc;
+    bottom: 0;
+    left: 20px;
+  }
+  /* line 19, ../sass/offline-theme-dark-indicator.sass */
+  .offline-ui .offline-ui-content {
+    padding-left: 1.5em;
+  }
+  /* line 22, ../sass/offline-theme-dark-indicator.sass */
+  .offline-ui .offline-ui-content:after {
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 1em;
+    margin: auto;
+    height: 0.8em;
+    width: 0.8em;
+  }
+  /* line 36, ../sass/offline-theme-dark-indicator.sass */
+  .offline-ui.offline-ui-up .offline-ui-content:after {
+    background: #80d580;
+  }
+  /* line 41, ../sass/offline-theme-dark-indicator.sass */
+  .offline-ui.offline-ui-down .offline-ui-content:after {
+    background: #e24949;
+  }

@@ -1,0 +1,235 @@
+@import '../node_modules/microtip/microtip.css';
+*{
+    margin: 0;
+    padding: 0;
+}
+@media (min-width:500px) {
+    html{
+        font-size: 18px;
+    }
+}
+@media (min-width:256px) and (max-width:499px) {
+    html{
+        font-size: 14px;
+    }
+}
+@media (max-width:255px) {
+    html{
+        font-size: 10px;
+    }
+}
+body{
+    background-color: #373737;
+    color: rgb(255, 255, 255);
+    overflow: hidden;
+}
+input{
+    width: 20rem;
+}
+.main__window{
+    z-index: 16; 
+    position: relative;
+   
+}
+.tabs__pane {
+    display: none;
+}
+.tabs__pane_show {
+    display: flex;
+    flex-direction: column;
+}    
+.tabs__pane_show input{
+    margin-top: 2%;
+    margin-bottom: 2%;
+    border-radius: 20px;
+    font-size: 1rem;
+    padding-left: 0.5rem;
+}  
+.tabs__pane_show button{
+    padding: 2px;
+    border-radius: 20px;
+    width: min-content;
+    font-size: 1rem;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0); 
+}
+a {
+    background: #fd264f;
+    color: #fff;
+    display: block;
+    font-size: 12px;
+    line-height: 1em;
+    margin: 0;
+    padding: 5px 110px;
+    position: fixed;
+    top: 20px;
+    right: -100px;
+    text-align: center;
+    text-decoration: none;
+    transform: rotate(45deg);
+}
+button:focus, input:focus, textarea:focus, select:focus{
+  outline: none; 
+}
+.tabs {
+    display: block;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-left: 50%;
+    transform: translate(-50%, 0); 
+    margin-top: 10%;
+    overflow: hidden; 
+    width: 30rem;
+}
+.tabs [class^="tab"] label,
+.tabs [class*=" tab"] label {
+    color: #efedef;
+    cursor: pointer;
+    display: block;
+    font-size: 1.1em;
+    font-weight: 300;
+    line-height: 1em;
+    padding: 2rem 0;
+    text-align: center; 
+}
+.tabs [class^="tab"] [type="radio"],
+ .tabs [class*=" tab"] [type="radio"] {
+    border-bottom: 1px solid rgba(239, 237, 239, 0.5);
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    display: block;
+    width: 100%;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out; 
+}
+.tabs [class^="tab"] [type="radio"]:hover, .tabs [class^="tab"] [type="radio"]:focus, 
+.tabs [class*=" tab"] [type="radio"]:hover,
+.tabs [class*=" tab"] [type="radio"]:focus {
+    border-bottom: 1px solid #fd264f; 
+}
+.tabs [class^="tab"] [type="radio"]:checked,
+.tabs [class*=" tab"] [type="radio"]:checked {
+    border-bottom: 2px solid #fd264f; 
+}
+.tabs [class^="tab"] [type="radio"]:checked + div,
+.tabs [class*=" tab"] [type="radio"]:checked + div {
+    opacity: 1; 
+}
+.tabs [class^="tab"] [type="radio"] + div,
+.tabs [class*=" tab"] [type="radio"] + div {
+    display: block;
+    opacity: 0;
+    padding: 2rem 0;
+    width: 90%;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out; 
+}
+.tabs .tab-2 {
+    width: 50%; 
+}
+.tabs .tab-2 [type="radio"] + div {
+    width: 200%;
+    margin-left: 200%; 
+}
+.tabs .tab-2 [type="radio"]:checked + div {
+    margin-left: 0; 
+}
+.tabs .tab-2:last-child [type="radio"] + div {
+    margin-left: 100%; 
+}
+.tabs .tab-2:last-child [type="radio"]:checked + div {
+    margin-left: -100%; 
+}
+@media (min-width:1024px){
+    @keyframes move_wave {
+        0% {
+            transform: translateX(0) translateZ(0) scaleY(1)
+        }
+        50% {
+            transform: translateX(-25%) translateZ(0) scaleY(0.55)
+        }
+        100% {
+            transform: translateX(-50%) translateZ(0) scaleY(1)
+        }
+    }
+    .waveWrapper {
+        overflow: hidden;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        margin: auto;
+    }
+    .waveWrapperInner {
+        position: absolute;
+        width: 100%;
+        overflow: hidden;
+        height: 100%;
+        bottom: -1px;
+        background-image: linear-gradient(to top, #373737 20%, #27273c 80%);
+    }
+    .bgTop {
+        z-index: 15;
+        opacity: 0.5;
+    }
+    .bgMiddle {
+        z-index: 10;
+        opacity: 0.75;
+    }
+    .bgBottom {
+        z-index: 5;
+    }
+    .wave {
+        position: absolute;
+        left: 0;
+        width: 200%;
+        height: 100%;
+        background-repeat: repeat no-repeat;
+        background-position: 0 bottom;
+        transform-origin: center bottom;
+    }
+    .waveTop {
+        background-size: 50% 100px;
+    }
+    .waveAnimation .waveTop {
+        animation: move-wave 3s;
+        -webkit-animation: move-wave 3s;
+        -webkit-animation-delay: 1s;
+        animation-delay: 1s;
+    }
+    .waveMiddle {
+        background-size: 50% 120px;
+    }
+    .waveAnimation .waveMiddle {
+        animation: move_wave 10s linear infinite;
+    }
+    .waveBottom {
+        background-size: 50% 100px;
+    }
+    .waveAnimation .waveBottom {
+        animation: move_wave 15s linear infinite;
+    }
+}
+#forgetPass{
+    z-index: 15;
+}
+.loader{
+    width: min-content;
+}
+.loader img{
+    padding-left: 1rem;
+    width: 1rem;
+    height: 1rem;
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/list_document.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="nav">
+        <div aria-label="Обновить" data-microtip-position="bottom" role="tooltip">
+            <img src="../img/refresh.png" alt="" srcset="" id="refreshButton" onclick="refr()">
+        </div>
+        <div aria-label="Загрузить на сервер" data-microtip-position="bottom" role="tooltip">
+            <img src="../img/cloud.png" alt="" srcset="" id="uploadButton" onclick="upload()"> 
+        </div>
+        <div class="general__search">
+            <input type="text" placeholder="Поиск" id="search" onkeyup="getValue(this.value)">
+            <div id="result">
+    
+            </div>
+        </div>
+        <!--<div aria-label="Настройки" data-microtip-position="bottom" role="tooltip">
+            <img src="../img/settings.png" alt="" srcset="" id="settings" onclick="settings()">
+        </div>-->
+        <div aria-label="Выйти из системы" data-microtip-position="bottom" role="tooltip">
+            <img src="../img/logout.png" alt="" srcset="" id="logout">
+        </div>
+    </div>
+    <div class="list" id="mainList"> 
+        <div class="customDoc" onclick="createDoc()" id="createDoc">
+            <img src="../img/plus.png" alt="" srcset="">
+        </div>
+    </div>
+    <script src="list_document.js"></script>
+</body>
+</html>
